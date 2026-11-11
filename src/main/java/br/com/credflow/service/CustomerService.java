@@ -15,6 +15,9 @@ public class CustomerService {
     }
 
     public Customer create(Customer customer) {
+        if (customerRepository.existsByCpf(customer.getCpf())){
+            throw new IllegalArgumentException("Já existe um cliente cadastrado com este CPF");
+        }
         return customerRepository.save(customer);
     }
 }

@@ -1,0 +1,9 @@
+POST http://localhost:8080/api/v1/customers
+Content-Type: application/json
+
+{
+  "name": "Maria Silva",
+  "email": "maria@email.com",
+  "cpf": "12345678901",
+  "monthlyIncome": 5500.00
+}
